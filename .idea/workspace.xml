@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="04deb937-9857-4179-b4b1-cecf2c321889" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/controller/AddressController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/controller/dto/AddressDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/controller/dto/AddressRecordRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/controller/dto/CustomerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/dao/CustomerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/dao/CustomerDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/dao/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/dao/StaffRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/dao/StoreRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/dao/entity/CustomerEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/dao/entity/StaffEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/dao/entity/StoreEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/exceptions/UnknownCustomerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hu/unideb/webdev/dao/CustomerDaoImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hu/unideb/webdev/service/CustomerServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/dao/CountryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/unideb/webdev/dao/CountryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kol5CLn9x2iiY1ZagXzQPBe6Pl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hu.unideb.webdev.service" />
+      <recent name="hu.unideb.webdev.dao" />
+      <recent name="hu.unideb.webdev.dao.entity" />
+      <recent name="hu.unideb.webdev.model" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="hu.unideb.webdev.exceptions" />
+      <recent name="hu.unideb.webdev.dao.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hu.unideb.webdev.App" />
+      <module name="spring_data" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.unideb.webdev.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddressDaoImplTest.testCreateAddress" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring_data" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.unideb.webdev.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.unideb.webdev.dao" />
+      <option name="MAIN_CLASS_NAME" value="hu.unideb.webdev.dao.AddressDaoImplTest" />
+      <option name="METHOD_NAME" value="testCreateAddress" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring_data" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.unideb.webdev.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.unideb.webdev.dao" />
+      <option name="MAIN_CLASS_NAME" value="hu.unideb.webdev.dao.CustomerDaoImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerDaoImplTest.testCreateCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring_data" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.unideb.webdev.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.unideb.webdev.dao" />
+      <option name="MAIN_CLASS_NAME" value="hu.unideb.webdev.dao.CustomerDaoImplTest" />
+      <option name="METHOD_NAME" value="testCreateCustomer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerDaoImplTest.testDeleteCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring_data" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.unideb.webdev.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.unideb.webdev.dao" />
+      <option name="MAIN_CLASS_NAME" value="hu.unideb.webdev.dao.CustomerDaoImplTest" />
+      <option name="METHOD_NAME" value="testDeleteCustomer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.CustomerDaoImplTest.testCreateCustomer" />
+        <item itemvalue="JUnit.CustomerDaoImplTest.testDeleteCustomer" />
+        <item itemvalue="JUnit.CustomerDaoImplTest" />
+        <item itemvalue="JUnit.AddressDaoImplTest.testCreateAddress" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04deb937-9857-4179-b4b1-cecf2c321889" name="Default Changelist" comment="" />
+      <created>1606374645665</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606374645665</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="605" y="288" key="#com.intellij.ide.util.MemberChooser" timestamp="1606982830159">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state x="605" y="288" key="#com.intellij.ide.util.MemberChooser/0.0.1600.1160@0.0.1600.1160" timestamp="1606982830159" />
+    <state width="1556" height="142" key="GridCell.Tab.0.bottom" timestamp="1606984759417">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1556" height="142" key="GridCell.Tab.0.bottom/0.0.1600.1160@0.0.1600.1160" timestamp="1606984759417" />
+    <state width="1556" height="142" key="GridCell.Tab.0.center" timestamp="1606984759417">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1556" height="142" key="GridCell.Tab.0.center/0.0.1600.1160@0.0.1600.1160" timestamp="1606984759417" />
+    <state width="1556" height="142" key="GridCell.Tab.0.left" timestamp="1606984759417">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1556" height="142" key="GridCell.Tab.0.left/0.0.1600.1160@0.0.1600.1160" timestamp="1606984759417" />
+    <state width="1556" height="142" key="GridCell.Tab.0.right" timestamp="1606984759417">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state width="1556" height="142" key="GridCell.Tab.0.right/0.0.1600.1160@0.0.1600.1160" timestamp="1606984759417" />
+    <state x="43" y="226" key="SettingsEditor" timestamp="1606982758652">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state x="43" y="226" key="SettingsEditor/0.0.1600.1160@0.0.1600.1160" timestamp="1606982758652" />
+    <state x="463" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1606380464014">
+      <screen x="0" y="0" width="1600" height="1160" />
+    </state>
+    <state x="463" y="255" width="672" height="678" key="search.everywhere.popup/0.0.1600.1160@0.0.1600.1160" timestamp="1606380464014" />
+  </component>
+</project>
