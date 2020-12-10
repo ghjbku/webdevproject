@@ -109,6 +109,7 @@ public class CustomerDaoImp implements CustomerDao {
         ).findAny();
         if (customerEntity.isPresent()) {
             customerEntity = Optional.ofNullable(CustomerEntity.builder()
+                    .id(customerid)
                     .first_name(newcustomer.getFirst_name())
                     .last_name(newcustomer.getLast_name())
                     .email(newcustomer.getEmail())
