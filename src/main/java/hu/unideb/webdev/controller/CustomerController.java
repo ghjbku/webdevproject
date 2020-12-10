@@ -60,6 +60,26 @@ public class CustomerController {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,e.getMessage());
         }
     }
+    @PostMapping("/updateCustomer")
+    public void updateCustomer(@RequestParam(name = "id", defaultValue = "1", required = true) int id,@RequestBody CustomerDto updateDto){
+        try{
+            service.updateCustomer(
+                    id,
+                    new Customer(
+                    updateDto.getStore(),
+                    updateDto.getFirst_name(),
+                    updateDto.getLast_name(),
+                    updateDto.getEmail(),
+                    updateDto.getAddress(),
+                    updateDto.getActive(),
+                    new Timestamp((new Date()).getTime()).toString()
+                    )
+            );
+        } catch (UnknownCustomerException | UnknownStoreException e) {
+            e.printStackTrace();
+        }
+    }
+
     @DeleteMapping("/removeCustomer")
     public void removeCustomer(@RequestBody CustomerDto requestDto){
         try {

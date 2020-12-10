@@ -101,6 +101,27 @@ public class CustomerDaoImp implements CustomerDao {
     }
 
     @Override
+    public void updateCustomer(int customerid,Customer newcustomer) throws UnknownCustomerException, UnknownStoreException {
+        Optional<CustomerEntity> customerEntity = StreamSupport.stream(customerRepository.findAll().spliterator(), false).filter(
+                entity -> {
+                    return customerid==entity.getId();
+                }
+        ).findAny();
+        if (customerEntity.isPresent()) {
+            customerEntity = Optional.ofNullable(CustomerEntity.builder()
+                    .first_name(newcustomer.getFirst_name())
+                    .last_name(newcustomer.getLast_name())
+                    .email(newcustomer.getEmail())
+                    .store(queryStore(newcustomer.getStore()))
+                    .address(queryAddress(newcustomer.getAddress()))
+                    .createDate(new java.sql.Date(new Date().getDate()))
+                    .lastUpdate(new Timestamp((new Date()).getTime()))
+                    .build());
+            customerRepository.save(customerEntity.get());
+        }else throw new UnknownCustomerException(String.format("customer Not Found: %d", customerid));
+    }
+
+    @Override
     public void deleteCustomer(Customer customer) throws UnknownCustomerException {
         Optional<CustomerEntity> customerEntity = StreamSupport.stream(customerRepository.findAll().spliterator(), false).filter(
                 entity -> {

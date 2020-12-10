@@ -9,7 +9,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -37,6 +39,11 @@ public class CustomerServiceImpl implements CustomerService{
             return customer.get();
         }else throw new UnknownCustomerException(String.format("customer Not Found: %s %s, %s",first_name,LastName,email));
     }
+
+    @Override
+    public void updateCustomer(int customerid, Customer updatecustomer) throws UnknownCustomerException, UnknownStoreException {
+        customerDao.updateCustomer(customerid,updatecustomer);
+       }
 
     @Override
     public void recordCustomer(Customer customer) throws UnknownCustomerException, UnknownStoreException {

@@ -12,6 +12,8 @@ public interface CustomerService {
 
     Customer getCustomerByFirstNameEmailAndLastName(String first_name,String LastName, String email) throws UnknownCustomerException;
 
+    void updateCustomer(int customerid, Customer updatecustomer) throws UnknownCustomerException, UnknownStoreException;
+
     void recordCustomer(Customer customer) throws UnknownCustomerException, UnknownStoreException;
 
     void deleteCustomer(Customer customer) throws UnknownCustomerException;

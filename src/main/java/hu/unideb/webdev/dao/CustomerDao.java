@@ -20,6 +20,8 @@ public interface CustomerDao {
 
     void createCustomer(Customer customer) throws UnknownCustomerException, UnknownStoreException;
     CustomerEntity queryCustomer(String email, String Fname, String Lname) throws UnknownCustomerException;
+
+    void updateCustomer (int customerid,Customer newcustomer) throws UnknownCustomerException, UnknownStoreException;
     Collection<Customer> readAll();
 
     void deleteCustomer(Customer customer) throws  UnknownCustomerException;
