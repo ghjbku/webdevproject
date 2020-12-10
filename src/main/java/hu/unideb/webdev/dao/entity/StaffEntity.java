@@ -32,7 +32,7 @@ public class StaffEntity {
     private String email;
 
     @Column
-    private char active;
+    private int active;
 
     @Column
     private String username;

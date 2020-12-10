@@ -3,6 +3,7 @@ package hu.unideb.webdev.service;
 import hu.unideb.webdev.dao.CustomerDao;
 import hu.unideb.webdev.dao.entity.CustomerEntity;
 import hu.unideb.webdev.exceptions.UnknownCustomerException;
+import hu.unideb.webdev.exceptions.UnknownStoreException;
 import hu.unideb.webdev.model.Customer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,18 +26,20 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public Customer getCustomerByFirstNameEmailAndLastName(String first_name,String LastName, String email) {
+    public Customer getCustomerByFirstNameEmailAndLastName(String first_name,String LastName, String email) throws UnknownCustomerException{
         Optional<Customer> customer =
         customerDao.readAll().stream()
                 .filter(names -> first_name.equals(names.getFirst_name()))
                 .filter(lname ->LastName.equals(lname.getLast_name()))
                 .filter(mails->email.equals(mails.getEmail()))
                 .findAny();
-        return customer.get();
+        if (customer.isPresent()) {
+            return customer.get();
+        }else throw new UnknownCustomerException(String.format("customer Not Found: %s %s, %s",first_name,LastName,email));
     }
 
     @Override
-    public void recordCustomer(Customer customer) throws UnknownCustomerException {
+    public void recordCustomer(Customer customer) throws UnknownCustomerException, UnknownStoreException {
             customerDao.createCustomer(customer);
     }
 

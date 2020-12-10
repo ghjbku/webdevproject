@@ -19,9 +19,9 @@ public class StoreEntity {
     @Column(name="store_id")
     private int id;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name="manager_staff_id")
-    private StaffEntity manager;
+    private StaffEntity manager_staff_id;
 
     @ManyToOne
     @JoinColumn(name="address_id")

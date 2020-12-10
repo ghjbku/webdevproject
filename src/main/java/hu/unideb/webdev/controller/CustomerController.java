@@ -1,7 +1,9 @@
 package hu.unideb.webdev.controller;
 
 import hu.unideb.webdev.controller.dto.CustomerDto;
+import hu.unideb.webdev.exceptions.UnknownCountryException;
 import hu.unideb.webdev.exceptions.UnknownCustomerException;
+import hu.unideb.webdev.exceptions.UnknownStoreException;
 import hu.unideb.webdev.model.Customer;
 import hu.unideb.webdev.service.CustomerService;
 import lombok.RequiredArgsConstructor;
@@ -34,8 +36,12 @@ public class CustomerController {
     }
 
     @GetMapping("/getCustomer/")
-    public Customer queryCustomer(@RequestParam(name = "fname", defaultValue = "string", required = false) String fname, @RequestParam(name = "lname", defaultValue = "string", required = false) String lname, @RequestParam(name = "email", defaultValue = "string", required = false) String email){
-        return service.getCustomerByFirstNameEmailAndLastName(fname, lname, email);
+    public Customer queryCustomer(@RequestParam(name = "fname", defaultValue = "string", required = false) String fname, @RequestParam(name = "lname", defaultValue = "string", required = false) String lname, @RequestParam(name = "email", defaultValue = "string", required = false) String email) throws UnknownCustomerException{
+        try {
+            return service.getCustomerByFirstNameEmailAndLastName(fname, lname, email);
+        }catch (UnknownCustomerException e) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,e.getMessage());
+        }
     }
 
     @PostMapping("/addCustomer")
@@ -50,7 +56,7 @@ public class CustomerController {
                     requestDto.getActive(),
                     new Timestamp((new Date()).getTime()).toString()
             ));
-        } catch (UnknownCustomerException e) {
+        } catch (UnknownCustomerException | UnknownStoreException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,e.getMessage());
         }
     }

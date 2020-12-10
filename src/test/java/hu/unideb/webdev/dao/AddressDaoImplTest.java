@@ -37,8 +37,9 @@ class AddressDaoImplTest {
                 .when(dao).queryCity(any(),any());
 
         dao.createAddress(getAddress());
+        dao.createAddress(getAddress());
 
-        verify(addressRepository,times(1)).save(any());
+        verify(addressRepository,times(2)).save(any());
     }
 
     private Address getAddress() {
